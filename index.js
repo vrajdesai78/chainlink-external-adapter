@@ -20,7 +20,7 @@ const createRequest = (input, callback) => {
   // The Validator helps you validate the Chainlink request data
   const validator = new Validator(callback, input, customParams)
   const jobRunID = validator.validated.id
-  const url = "http://localhost:3000/getSteps"
+  const url = "https://steps-api.up.railway.app/getSteps"
   const walletAddress = validator.validated.data.walletAddress
 
   const params = {
